@@ -31,4 +31,4 @@ jobs:
         uses: skywarth/vite-github-pages-deployer@master
         id: deploy_to_pages
         with:
-          build_path: ./demo
+          build_path: ./public
