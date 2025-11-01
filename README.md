@@ -4,7 +4,7 @@ Unofficial library for modifying the RGB LEDs of a Wooting keyboard and getting 
 
 [Demo](https://clinth.github.io/woot/)
 
-⚠️ I only have the Wooting Two keyboard, so unsure how well it works with variants. Devices requiring small packet sizes are not supported for that reason. Happy for pull requests for to support other Wooting keyboards ⚠️ 
+⚠️ I only have the Wooting Two keyboard, so unsure how well it works with variants. Devices requiring small packet sizes are not supported for that reason. Happy for pull requests to support other Wooting keyboards ⚠️ 
 
 ## Usage
 
