@@ -22,7 +22,7 @@ export abstract class DeviceBase {
 
     // Apologies...
     if (this._info.smallPackets) {
-      throw new Error(`Small packet size transfers are not supported - I don't have a keyboard to test with. Sorry.`);
+      console.warn(`Small packet size transfers are not supported - I don't have a keyboard to test with. Sorry.`);
     }
     if (!this._info.v2) {
       throw new Error(`Pre-version 2 devices are not supported - I don't have a keyboard to test with. Sorry.`);
