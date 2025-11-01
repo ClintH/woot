@@ -1,6 +1,6 @@
 {
   "name": "@clinth/woot",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Set RGB colours and get analog input from Wooting keyboards",
   "type": "module",
   "license": "MIT",

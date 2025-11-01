@@ -125,7 +125,7 @@ export const wooting80he: KeyboardInfo = {
   layout: `unknown`
 }
 
-export const resolveInfo: Record<number, KeyboardInfo> = {
+export const pidToInfo: Record<number, KeyboardInfo> = {
   [ C.WOOTING_60HE_ARM_PID ]: wooting60HeArm,
   [ C.WOOTING_60HE_PID ]: wooting60He,
   [ C.WOOTING_60HE_PLUS_PID ]: wooting60HePlus,

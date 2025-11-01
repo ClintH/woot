@@ -16,9 +16,10 @@ export function filterMatch(dev: HIDDevice, f: HIDDeviceFilter): Result<HIDDevic
     }
   }
   if (f.productId !== undefined) {
-    if (dev.productId !== f.productId) {
+    const pid = dev.productId & 0xFFF0;
+    if (pid !== f.productId) {
       success = false;
-      reason.push(`Product id mismatch: ${ dev.productId }. Expected: ${ f.productId }`);
+      reason.push(`Product id mismatch: ${ pid }. Expected: ${ f.productId }`);
     }
   }
   if (f.usagePage !== undefined) {

@@ -14,7 +14,7 @@ export abstract class DeviceBase {
 
     // Attempt to resolve the right metadata
     if (!info) {
-      this._info = Info.resolveInfo[ device.productId ];
+      this._info = Info.pidToInfo[ device.productId & 0xFFF0 ];
     } else {
       this._info = info;
     }

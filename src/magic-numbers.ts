@@ -36,6 +36,8 @@ export const WOOTING_TWO_LE_PID = 0x1210;
 
 export const WOOTING_TWO_HE_PID = 0x1220;
 export const WOOTING_TWO_HE_ARM_PID = 0x1230;
+export const WOOTING_TWO_HE_ARM_PID2 = 0x1230;
+
 export const WOOTING_60HE_PID = 0x1300;
 export const WOOTING_60HE_ARM_PID = 0x1310;
 export const WOOTING_60HE_PLUS_PID = 0x1320;
