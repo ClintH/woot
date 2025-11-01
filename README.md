@@ -1,10 +1,10 @@
 # @clinth/woot
 
-Unofficial library is for modifying the RGB LEDs of a Wooting keyboard and getting analog input. It uses the WebHID API which is only available in Chrome and its derivatives.
+Unofficial library for modifying the RGB LEDs of a Wooting keyboard and getting analog input. It uses the WebHID API which is only available in Chrome and its derivatives.
 
 [Demo](https://clinth.github.io/woot/)
 
-I only have the Wooting Two keyboard, so unsure how well it works with variants. Devices requiring small packet sizes are not supported for that reason.
+⚠️ I only have the Wooting Two keyboard, so unsure how well it works with variants. Devices requiring small packet sizes are not supported for that reason. Happy for pull requests for to support other Wooting keyboards ⚠️ 
 
 ## Usage
 
