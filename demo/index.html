@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="icon" type="image/svg+xml" href="/vite.svg">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Wooting Keyboard</title>
+	</head>
+	<body>
+		<h1>Wooting Keyboard</h1>
+		<section>
+			<button id="btnScan">Scan</button>
+			<div id="scanResults"></div>
+		</section>
+		<section>
+			<h2>Buffered output</h2>
+			<p>This will set keyboard colours by row and then by column. After a moment it resets the colours.</p>
+			<button id="btnDemoBuffered">Demo buffered output</button>
+		</section>
+		<section>
+			<h2>Single key</h2>
+			<p>Set the colour of a single key.</p>
+			<form>
+				<label for="singleRow">Row</label>
+				<input type="number" id="singleRow" value="0">
+				<label for="singleColumn">Column</label>
+				<input type="number" id="singleColumn" value="0">
+				<label for="colour">Colour</label>
+				<input type="color" id="colour" value="#ff0000">
+				<button id="btnDemoSingle">Demo single key output</button>
+			</form>
+		</section>
+		<section>
+			<h2>Analog input</h2>
+			<p>Pressed keys will appear here:</p>
+			<div id="keys"></div>
+		</section>
+		<section>
+			<h2>Reset</h2>
+			<p>Resets the colours back to your saved profile, and allows Wootility to control colours again.</p>
+			<button id="btnReset">Reset all</button>
+		</section>
+		<script type="module" src="./demo.ts"></script>
+	</body>
+</html>
