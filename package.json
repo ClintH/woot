@@ -29,7 +29,7 @@
     "test": "vitest",
     "typecheck": "tsc --noEmit",
     "dev:demo": "vite serve ./demo/",
-    "build:demo": "vite build ./demo/"
+    "build:demo": "vite build ./demo/ --base=./"
   },
   "devDependencies": {
     "@types/node": "^24.9.1",
