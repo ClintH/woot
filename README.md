@@ -1,12 +1,18 @@
 # @clinth/woot
 
-Unofficial library is for modifying the RGB LEDs of a Wooting keyboard and getting analog input.
+Unofficial library is for modifying the RGB LEDs of a Wooting keyboard and getting analog input. It uses the WebHID API which is only available in Chrome and its derivatives.
 
-It uses the WebHID API which is only available in Chrome and its derivatives.
+[Demo](https://clinth.github.io/woot/)
 
 I only have the Wooting Two keyboard, so unsure how well it works with variants. Devices requiring small packet sizes are not supported for that reason.
 
-## Usage: RGB
+## Usage
+
+```bash
+npm install @clinth/woot
+```
+
+### RGB
 
 Set up:
 
@@ -69,7 +75,7 @@ You can also reset a single key to its default colour (as determined by saved pr
 wd.resetSingle({ row:0, column: 0});
 ```
 
-## Usage: Analog input
+### Analog input
 
 Set up:
 
@@ -100,19 +106,11 @@ npm run dev:demo
 
 ## Development
 
-- Install dependencies:
+Install dependencies:
 
 ```bash
 npm install
 ```
-
-- Run the unit tests:
-
-```bash
-npm run test
-```
-
-- Build the library:
 
 ```bash
 npm run build
