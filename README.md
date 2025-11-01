@@ -1,8 +1,10 @@
 # @clinth/woot
 
-Unofficial library is for modifying the RGB LEDs of a Wooting keyboard using the WebHID API. Only available in Chrome and its derivatives. It also gives access to the analog data from each key.
+Unofficial library is for modifying the RGB LEDs of a Wooting keyboard and getting analog input.
 
-I only have the Wooting Two keyboard, so unsure how well it works with variants. Devices requiring small packet sizes is not supported for that reason.
+It uses the WebHID API which is only available in Chrome and its derivatives.
+
+I only have the Wooting Two keyboard, so unsure how well it works with variants. Devices requiring small packet sizes are not supported for that reason.
 
 ## Usage: RGB
 
@@ -13,14 +15,17 @@ const d = new Devices();
 await d.initialise();
 ```
 
+
 Set colours to a buffer:
 
 ```js
+const wd = d.devices[0]; // Get first device
+
 // Set the Esc key to red
 wd.setRgb({ row: 0, column: 0}, { r: 255, g: 0, b: 0 });
 
 // Or alternatively:
-ws.setRgbAlt(0, 0, 255, 0, 0);
+wd.setRgbAlt(0, 0, 255, 0, 0);
 ```
 
 Write all changed keys to the keyboard:
@@ -62,6 +67,26 @@ You can also reset a single key to its default colour (as determined by saved pr
 
 ```js
 wd.resetSingle({ row:0, column: 0});
+```
+
+## Usage: Analog input
+
+Set up:
+
+```js
+const d = new Devices({ analog: true });
+await d.initialise();
+```
+
+Use the `oninput` handler to listen for key input from a device:
+
+```js
+// Get all analog input Wooting devices
+for (const wd of d.getAnalog()) {
+  wd.oninput = (event) => {
+    console.log(`Key: ${event.key} Value: ${event.value} Code: ${event.code}`);
+  }
+}
 ```
 
 ## Demo
